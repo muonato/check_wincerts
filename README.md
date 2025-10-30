@@ -22,6 +22,8 @@ Parameters:
 1. Check two certificates in default store
 ```
 PS> check_wincerts.ps1 "MyCert,MyOtherCert"
+MyCert: NotAfter (9.9.2026) 313 days
+MyOtherCert: NotAfter (7.10.2035) 3628 days
 ```
 
 2. Opsview / Nagios service check (set warning alert to 60 days and critical alert to 30 days)
