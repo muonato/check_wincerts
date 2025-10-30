@@ -2,7 +2,7 @@
 Certificate expiration date monitoring for NSClient++ ( https://nsclient.org/ )
 
 ## Overview
-Monitoring plugin script reads Windows certificate '*NotAfter*' object parameter for named certificate(s) matched with '*FriendlyName*' object parameter.
+Monitoring plugin script reads Windows certificate '*NotAfter*' object parameter for named certificate(s) matched with '*FriendlyName*' parameter.
 
 Plugin script exit code corresponds with the highest severity (or the least days until expiration) of any given certificate.
 
