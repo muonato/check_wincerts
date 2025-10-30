@@ -1,6 +1,6 @@
-<# muonato/check_wincerts.ps1 @ GitHub (29-OCT-2025)
+<# muonato/check_wincerts.ps1 @ GitHub (30-OCT-2025)
 
-Reports expiration date of certificates using friendly name
+Reports expiration date of certificates with friendly name
 
 Usage:
     PS> check_wincerts.ps1 "<Name>[,<Name>] [Warning] [Critical] [Location]"
@@ -39,7 +39,7 @@ foreach ($Cert in $Certs) {
     if ($Target) {
         $Expiry = Get-Date (($Target).NotAfter) -Format d
         $Remain = (New-TimeSpan -Start (Get-Date) -End $Expiry).Days
-	$Status = if ($Remain -lt $C) {2} elseif ($Remain -lt $W -and $Status -lt 2) {1} else {$Status}
+        $Status = if ($Remain -lt $C) {2} elseif ($Remain -lt $W -and $Status -lt 2) {1} else {$Status}
     }
     $Report += "$Cert`: NotAfter ($Expiry) $Remain days`r`n"
 }
