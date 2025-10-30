@@ -3,15 +3,15 @@
 Reports expiration date of certificates with friendly name
 
 Usage:
-    PS> check_wincerts.ps1 "<Name>[,<Name>] [Warning] [Critical] [Location]"
+    PS> check_wincerts.ps1 "<Name>[,<Name>] <Warning> <Critical> [Location]"
 
 Parameters:
     1: String of arguments separated by space
 
-    1/1 : String of certificate friendly names separated by comma
-    1/2 : Warning threshold (days) in monitoring service check
-    1/3 : Critical threshold (days) in monitoring service check
-    1/4 : Certificate location [default: "Cert:\LocalMachine\My"]
+    Name    : Certificate friendly names separated by comma
+    Warning : Threshold (days) for monitoring 'warning' alert
+    Critical: Threshold (days) for monitoring 'critical' alert
+    Location: Certificate store, default: "Cert:\LocalMachine\My"
 
 Examples:
     1. Check two certificates in default store
