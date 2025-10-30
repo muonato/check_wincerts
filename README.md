@@ -1,8 +1,8 @@
 # check_wincerts
-Certificate expiration date monitoring compatible with NSClient++
+Certificate expiration date monitoring for NSClient++ ( https://nsclient.org/ )
 
 ## Configuration
-1. Add path to script in your custom NSClient++ configuration file
+1. Add check_wincerts command and path to script in your NSClient++ custom configuration file
 ```
 [/settings/external scripts]
 allow arguments = true
